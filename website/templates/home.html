@@ -7,11 +7,25 @@
     <title>Welcome to the DJ website.</title>
 </head>
 <body>
-    <div class="header">
+    <header>
+        <!-- <img class="logo" src="insert_image_here.jpg" alt="logo"> -->
+        <nav> <!-- navigation bar -->
+            <ul class ="nav__links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">About the DJ's</a></li>
+            </ul>
+        </nav>
+        
+        
+    
+        <!--
         <h1>Welcome to the party! </h1>
         <p>Ready to have your very own?</p>
-        <a class="button" href="#contact">Contact Us</a> <!-- we will use #contact later to attribute the link to a section with id "contact" to enable smooth scrolling -->
-    </div>
+        <a class="button" href="#contact">Contact Us</a> 
+        
+        we will use #contact later to attribute the link to a section with id "contact" to enable smooth scrolling -->
+        </header>
     <script src="{{ url_for('static', filename='scripts.js') }}"></script>
 </body>
 </html>
