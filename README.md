@@ -23,7 +23,7 @@ In the future, using front-end software, the website will showcase DJ profiles, 
 Before you begin, ensure you have met the following requirements:
 
 - Python 3.x installed
-- (Optional but reccomended) Virtual environment tool (e.g., virtualenv or venv. Install using `pip install virtualenv` in your terminal) 
+- (Optional but recommended) Virtual environment tool (e.g., virtualenv or venv. Install using `pip install virtualenv` in your terminal) 
 - Flask installed (Install using `pip install Flask` in your terminal)
 
 ### Installation

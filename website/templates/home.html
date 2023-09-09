@@ -1,31 +1,31 @@
 <!DOCTYPE html> <!-- declares doctype and html version -->
 <html lang="en"> 
-<head>
-    <meta charset="UTF-8"> <!-- Meta tags define  chracter encording and viewport settings (responsiveness) -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}"> <!-- retrieves external .css file for  styling -->
-    <title>Welcome to the DJ website.</title>
-</head>
-<body>
-    <header>
-        <!-- <img class="logo" src="insert_image_here.jpg" alt="logo"> -->
-        <nav> <!-- navigation bar -->
-            <ul class ="nav__links">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">FAQ</a></li>
-                <li><a href="#">About the DJ's</a></li>
-            </ul>
-        </nav>
-        
-        
-    
-        <!--
-        <h1>Welcome to the party! </h1>
-        <p>Ready to have your very own?</p>
-        <a class="button" href="#contact">Contact Us</a> 
-        
-        we will use #contact later to attribute the link to a section with id "contact" to enable smooth scrolling -->
+    <head>
+        <meta charset="UTF-8"> <!-- Meta tags define  chracter encording and viewport settings (responsiveness) -->
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}"> <!-- retrieves external .css file for  styling -->
+        <title>Welcome to the DJ website.</title>
+    </head>
+    <body>
+        <header>
+            <img class="logo" src="static/img/insert_logo.jpeg" alt="logo"> 
+            <nav> <!-- navigation bar -->
+                <ul class="nav__links">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">About the DJ's</a></li>
+                </ul>
+            </nav>
+            <a class="cta" href="#"><button>Contact</button></a>
+            <!--  
+            <h1>Welcome to the party! </h1>
+            <p>Ready to have your very own?</p>
+            <a class="button" href="#contact">Contact Us</a> 
+            
+            we will use #contact later to attribute the link to a section with id "contact" to enable smooth scrolling -->
         </header>
-    <script src="{{ url_for('static', filename='scripts.js') }}"></script>
-</body>
+        <script src="{{ url_for('static', filename='scripts.js') }}"></script>
+    </body>
 </html>
