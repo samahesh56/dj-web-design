@@ -16,10 +16,6 @@ In the future, using front-end software, the website will showcase DJ profiles, 
 
 ---
 
-## Getting Started
-
-Coming soon.
-
 ### Prerequisites
 
 Before you begin, ensure you have met the following requirements:
@@ -96,7 +92,7 @@ Unsure how to proceed? https://docs.github.com/en/get-started/quickstart/contrib
 
 ### License
 
-Coming soon.
+This project is licensed under the MIT License - see the LICENSE file for details.
 
 
 
