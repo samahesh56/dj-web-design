@@ -16,14 +16,15 @@ In the future, using front-end software, the website will showcase DJ profiles, 
 
 ---
 
+## Getting Started
+
 ### Prerequisites
 
 Before you begin, ensure you have met the following requirements:
 
 - Python 3.x installed
-- Virtual environment tool (e.g., virtualenv or venv. Install using `pip install virtualenv`) 
-- Flask installed (you can install it using `pip install Flask` in your terminal)
-- [SQLite](https://www.sqlite.org/) for the database (preinstalled, databasing)
+- (Optional but reccomended) Virtual environment tool (e.g., virtualenv or venv. Install using `pip install virtualenv` in your terminal) 
+- Flask installed (Install using `pip install Flask` in your terminal)
 
 ### Installation
 
@@ -33,8 +34,9 @@ Before you begin, ensure you have met the following requirements:
    git clone https://github.com/samahesh56/dj-web-design.git
    cd dj-website
    ```
+   Or simply clone using the GitHub Desktop App. Simply go to file -> clone a repository -> url: https://github.com/samahesh56/dj-web-design.git
 
-2. **Create and Activate virtual enviroment:**
+2. **Create and Activate virtual environment:**
 
     ```bash
     python -m venv venv 
@@ -51,7 +53,7 @@ Before you begin, ensure you have met the following requirements:
 
 4. **Set Up the SQLite Database:**
 
-    Run these commands to initialize and migrate the database.
+    Run these commands to initialize and migrate the database. (Currently optional)
     ```
     flask db init
     flask db migrate
