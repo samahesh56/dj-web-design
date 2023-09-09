@@ -5,11 +5,11 @@ views = Blueprint('views', __name__)
 
 @views.route('/') #this route is hit when the initial program is run (view) 
 def home():
-    return '<h1>This is the home page! Please use /faq, /about/ and /contact to navigate.<h1>' # this then runs the home function to display text
+    return render_template('home.html') # this then runs the home function to display text
 
-@views.route('/faq')
+@views.route('/faq') #website route 
 def faq():
-    return render_template('faq.html')
+    return render_template('faq.html') #function (faq.html) in templates
 
 @views.route('/about')
 def about():
