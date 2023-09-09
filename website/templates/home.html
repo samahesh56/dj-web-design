@@ -1,10 +1,17 @@
-<!DOCTYPE html>
-<html>
+<!DOCTYPE html> <!-- declares doctype and html version -->
+<html lang="en"> 
 <head>
-    <title>Welcome to our DJ website</title>
+    <meta charset="UTF-8"> <!-- Meta tags define  chracter encording and viewport settings (responsiveness) -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}"> <!-- retrieves external .css file for  styling -->
+    <title>Welcome to the DJ website.</title>
 </head>
 <body>
-    <h1>Welcome to our DJ website</h1>
-    <p>Find out more about our DJs, view upcoming events, and contact us!</p>
+    <div class="header">
+        <h1>Welcome to the party! </h1>
+        <p>Ready to have your very own?</p>
+        <a class="button" href="#contact">Contact Us</a> <!-- we will use #contact later to attribute the link to a section with id "contact" to enable smooth scrolling -->
+    </div>
+    <script src="{{ url_for('static', filename='scripts.js') }}"></script>
 </body>
 </html>
