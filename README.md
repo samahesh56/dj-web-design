@@ -21,7 +21,7 @@ In the future, using front-end software, the website will showcase DJ profiles, 
 Before you begin, ensure you have met the following requirements:
 
 - Python 3.x installed
-- Virtual environment tool (e.g., virtualenv or venv. Install ussing `pip install virtualenv`) 
+- Virtual environment tool (e.g., virtualenv or venv. Install using `pip install virtualenv`) 
 - Flask installed (you can install it using `pip install Flask` in your terminal)
 - [SQLite](https://www.sqlite.org/) for the database (preinstalled, databasing)
 
