@@ -13,9 +13,9 @@
     <header> <!-- Navbar structure -->
         <nav class="nav"> 
             <ul class="nav__links">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">FAQ</a></li>
-                <li><a href="#">About the DJ's</a></li>
+                <li><a href="{{ url_for('views.home') }}">Home</a></li>
+                <li><a href="{{ url_for('views.faq') }}">FAQ</a></li>
+                <li><a href="{{ url_for('views.about') }}">About the DJ's</a></li>
             </ul>
             <a class="cta" href="#"><button>Contact</button></a>
             <div class="burger">
@@ -29,8 +29,10 @@
     <!-- Section 1: White background -->
     <section class="section-white">
         <div class="content">
+            {% block content %}
             <h1>Welcome</h1>
             <p>This is the first section with a white background.</p>
+            {% endblock %}
         </div>
     </section>
 
