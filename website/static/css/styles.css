@@ -1,14 +1,14 @@
 /* Font Import from Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
 
-/* Default Styles for Navigation Links and Button (Hamburger-Style Navbar) */
+/* DEFAULT Styles for Navigation Links and Button (Hamburger-Style Navbar) */
 li, a, button {
     font-family: "Montserrat", sans-serif;
     font-weight: 500;
     font-size: 18px;
     color: #edf0f1;
     text-decoration: none;
-    list-style: none; /* Remove bullet points */
+    list-style: none; /* Removes bullet points */
     display: inline; /* Display as inline elements */
     margin-right: 20px; /* Increase spacing between navigation links */
     margin-left: 18px; /* Move the navigation links to the left */
@@ -20,17 +20,17 @@ header {
     top: 0;
     left: 0;
     right: 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 10%;
-    background-color: red; /* Red background for the navbar */
-    border-bottom: 2px solid rgb(92, 89, 89);
+    display: flex; /* css Flexbox integration, allows for auto-alignment of elements */
+    justify-content: space-between; /* All available space is inserted between the first and last items, pushing them to the container's opposing ends*/
+    align-items: center; 
+    padding: 10px 10%; /* space between content and border. */
+    background-color: red; /* Change background color of Navbar here */
+    border-bottom: 2px solid rgb(92, 89, 89); /* color of bottom border */
 }
 
-/* Style for the rest of the background */
+/* Style for the rest of the website background */
 body {
-    background-color: darkgray; /* Dark gray background for the body */
+    background-color: darkgray; /* Change background color here */
 }
 
 /* Logo Styles */
