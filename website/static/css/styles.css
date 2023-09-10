@@ -1,103 +1,90 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap'); 
+/* Font Import from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
 
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    background-color:darkgray;
-
-}
-
+/* Default Styles for Navigation Links and Button (Hamburger-Style Navbar) */
 li, a, button {
     font-family: "Montserrat", sans-serif;
     font-weight: 500;
-    font-size: 16px;
+    font-size: 18px;
     color: #edf0f1;
     text-decoration: none;
+    list-style: none; /* Remove bullet points */
+    display: inline; /* Display as inline elements */
+    margin-right: 20px; /* Increase spacing between navigation links */
+    margin-left: 18px; /* Move the navigation links to the left */
 }
 
+/* Header Styles */
 header {
+    position: fixed; /* Navbar stays at the top */
+    top: 0;
+    left: 0;
+    right: 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 30px 10%;
+    padding: 10px 10%;
+    background-color: red; /* Red background for the navbar */
+    border-bottom: 2px solid rgb(92, 89, 89);
 }
 
+/* Style for the rest of the background */
+body {
+    background-color: darkgray; /* Dark gray background for the body */
+}
+
+/* Logo Styles */
 .logo {
     cursor: pointer;
 }
 
-.nav__links li {
-    display: inline-block;
-    padding: 0px 20px;
+/* Navigation Styles (Hamburger-Style Navbar) */
+.nav {
+    display: flex; /* Change to flex to display the navigation menu */
+    align-items: center;
+    margin-left: auto; /* Right-align the navigation links */
 }
 
-.nav__links li a {
-    transition: all 0.3s ease 0s;
+.burger {
+    display: none; /* Hide the hamburger icon by default */
+    cursor: pointer;
 }
 
-.nav__links li a:hover {
-    color:aquamarine;
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: #edf0f1;
+    margin: 5px 0;
+    transition: 0.4s;
 }
 
+/* Style for the "Contact" button */
 button {
-    padding: 9px 25px;
-    background-color:  rgba(0,136,169,1);
+    padding: 9px 15px; /* Adjust padding for a less blocky appearance */
+    background-color: rgba(1, 18, 22, 0.8); /* Use a darker color */
     border: none;
     border-radius: 50px;
     cursor: pointer;
-    transition: all 0.3s ease 0s;
+    transition: background-color 0.3s ease; /* Add a smooth transition effect */
 }
 
 button:hover {
-    background-color:rgba(0,136,169,0.8)
-}
-/* Reset some default styles 
-html, body, h1, p {
-    margin: 0;
-    padding: 0;
+    background-color: rgba(0, 136, 169, 1); /* Darken the color when hovered */
 }
 
-body {
-    font-family: Arial, sans-serif;
-    background-color: #333333;
-    color: #FFFFFF;
-    text-align: center;
-    padding: 20px;
+/* Navigation link hover effect */
+.nav__links li a:hover {
+    color: aquamarine; /* Change the text color to aquamarine when hovered */
+    transition: color 0.3s ease; /* Add a smooth transition effect */
 }
 
-.header {
-    background-image: url('djpic1.jpeg');
-    background-size: cover;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
+/* Media query for smaller screens (Hamburger-Style Navbar) */
+@media screen and (max-width: 768px) {
+    .burger {
+        display: block; /* Show the hamburger icon on smaller screens */
+    }
 
-.header h1 {
-    font-size: 2.5rem;
+    .nav__links {
+        display: none; /* Hide the navigation links on smaller screens */
+    }
 }
-
-.header p {
-    font-size: 1.5rem;
-}
-
-.button {
-    margin-top: 20px;
-    padding: 10px 20px;
-    background-color: #FF0000;
-    color: #FFFFFF;
-    text-decoration: none;
-    border: none;
-    border-radius: 5px;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.button:hover {
-    background-color: #990000;
-}
-*/
