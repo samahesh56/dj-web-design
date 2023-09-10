@@ -1,18 +1,20 @@
 /* Font Import from Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
 
-/* DEFAULT Styles for Navigation Links and Button (Hamburger-Style Navbar) */
+
+/* Default Styles for Navigation Links and Button (Hamburger-Style Navbar) */
 li, a, button {
     font-family: "Montserrat", sans-serif;
     font-weight: 500;
     font-size: 18px;
     color: #edf0f1;
     text-decoration: none;
-    list-style: none; /* Removes bullet points */
+    list-style: none; /* Remove bullet points */
     display: inline; /* Display as inline elements */
     margin-right: 20px; /* Increase spacing between navigation links */
     margin-left: 18px; /* Move the navigation links to the left */
 }
+
 
 /* Header Styles */
 header {
@@ -20,23 +22,20 @@ header {
     top: 0;
     left: 0;
     right: 0;
-    display: flex; /* css Flexbox integration, allows for auto-alignment of elements */
-    justify-content: space-between; /* All available space is inserted between the first and last items, pushing them to the container's opposing ends*/
-    align-items: center; 
-    padding: 10px 10%; /* space between content and border. */
-    background-color: red; /* Change background color of Navbar here */
-    border-bottom: 2px solid rgb(92, 89, 89); /* color of bottom border */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 22px 10%;
+    background-color: red; /* Red background for the navbar */
+    border-bottom: 2px solid rgb(92, 89, 89);
 }
 
-/* Style for the rest of the website background */
-body {
-    background-color: darkgray; /* Change background color here */
-}
 
 /* Logo Styles */
 .logo {
     cursor: pointer;
 }
+
 
 /* Navigation Styles (Hamburger-Style Navbar) */
 .nav {
@@ -45,10 +44,12 @@ body {
     margin-left: auto; /* Right-align the navigation links */
 }
 
+
 .burger {
     display: none; /* Hide the hamburger icon by default */
     cursor: pointer;
 }
+
 
 .bar {
     width: 25px;
@@ -57,6 +58,7 @@ body {
     margin: 5px 0;
     transition: 0.4s;
 }
+
 
 /* Style for the "Contact" button */
 button {
@@ -68,9 +70,11 @@ button {
     transition: background-color 0.3s ease; /* Add a smooth transition effect */
 }
 
+
 button:hover {
     background-color: rgba(0, 136, 169, 1); /* Darken the color when hovered */
 }
+
 
 /* Navigation link hover effect */
 .nav__links li a:hover {
@@ -78,16 +82,20 @@ button:hover {
     transition: color 0.3s ease; /* Add a smooth transition effect */
 }
 
+
 /* Media query for smaller screens (Hamburger-Style Navbar) */
 @media screen and (max-width: 768px) {
     .burger {
         display: block; /* Show the hamburger icon on smaller screens */
     }
 
+
     .nav__links {
         display: none; /* Hide the navigation links on smaller screens */
     }
 }
+
+
 
 
 /* Styles for Section 1 with a white background */
@@ -99,10 +107,12 @@ button:hover {
     min-height: 500px; /* Increase the section height */
 }
 
+
 .section-white .content {
     max-width: 800px; /* Limit the content width */
     margin: 0 auto; /* Center the content horizontally */
 }
+
 
 /* Styles for Section 2 with a gray background */
 .section-gray {
@@ -113,11 +123,13 @@ button:hover {
     min-height: 500px; /* Increase the section height */
 }
 
+
 .section-gray .content {
     max-width: 800px; /* Limit the content width */
     margin: 0 auto; /* Center the content horizontally */
     color: white; /* Text color for this section */
 }
+
 
 /* Styles for the footer section */
 footer {
@@ -125,6 +137,7 @@ footer {
     color: white; /* Text color for the footer */
     padding: 20px 0; /* Adjust padding as needed */
 }
+
 
 .footer-content {
     max-width: 1200px; /* Limit the content width */
@@ -134,18 +147,22 @@ footer {
     align-items: flex-start;
 }
 
+
 .footer-info, .footer-links, .footer-social {
     flex: 1;
     padding: 0 20px;
 }
 
+
 .footer-links ul {
     list-style: none;
 }
 
+
 .footer-links ul li {
     margin-bottom: 10px; /* Adjust spacing between links */
 }
+
 
 .social-icon {
     display: inline-block;
@@ -154,11 +171,13 @@ footer {
     text-decoration: none;
 }
 
+
 /* Copyright notice */
 .copyright {
     text-align: center;
     margin-top: 20px; /* Adjust spacing from the footer content */
 }
+
 
 /* Additional styles to remove margin and padding for body and html */
 body, html {
@@ -167,7 +186,10 @@ body, html {
 }
 
 
+
+
 /* Styles specific to the FAQ page */
+
 
 /* Styling the FAQ heading */
 .faq-page .faq-heading {
@@ -176,6 +198,7 @@ body, html {
     margin-top: 50px;
 }
 
+
 /* Styling the FAQ paragraph */
 .faq-page .faq-paragraph {
     font-size: 16px;
@@ -183,10 +206,13 @@ body, html {
     margin-bottom: 30px;
 }
 
+
 /* Styling the FAQ list */
 .faq-page .faq-list {
     padding-left: 20px;
 }
+
+
 
 
 /* Styles specific to the About Us page */
@@ -196,10 +222,12 @@ body, html {
     text-align: center;
 }
 
+
 .about-section .content {
     max-width: 800px; /* Limit the content width */
     margin: 0 auto; /* Center the content horizontally */
 }
+
 
 /* Custom styles for About Us heading */
 .about-heading {
@@ -208,11 +236,17 @@ body, html {
     margin-top: 20px;
 }
 
+
 /* Custom styles for About Us paragraphs */
 .about-paragraph {
     font-size: 18px;
     line-height: 1.5;
     margin-bottom: 30px;
 }
+
+
+
+
+
 
 
