@@ -90,7 +90,7 @@ Contributions are welcome! If you'd like to contribute to my project, please fol
 3. Make your changes and test them thoroughly.
 4. Create a pull request with a clear description of your changes.
 
-Unsure how to proceed? https://docs.github.com/en/get-started/quickstart/contributing-to-projects for more information. 
+Unsure how to proceed? Visit "https://docs.github.com/en/get-started/quickstart/contributing-to-projects" for more information. 
 
 ### License
 
