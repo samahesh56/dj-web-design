@@ -23,14 +23,9 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 10%;
+    padding: 22px 10%;
     background-color: red; /* Red background for the navbar */
     border-bottom: 2px solid rgb(92, 89, 89);
-}
-
-/* Style for the rest of the background */
-body {
-    background-color: darkgray; /* Dark gray background for the body */
 }
 
 /* Logo Styles */

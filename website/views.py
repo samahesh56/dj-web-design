@@ -16,7 +16,7 @@ def about():
 
 @views.route('/contact')
 def contact():
-    return 'Contact me at samahesh56@gmail.com'
+    return render_template('contact.html')
 
 
 
