@@ -88,3 +88,131 @@ button:hover {
         display: none; /* Hide the navigation links on smaller screens */
     }
 }
+
+
+/* Styles for Section 1 with a white background */
+.section-white {
+    background-color: white;
+    padding: 60px 0; /* Adjust padding as needed */
+    text-align: center; /* Center the content */
+    width: 100%; /* Make the section span the entire width */
+    min-height: 500px; /* Increase the section height */
+}
+
+.section-white .content {
+    max-width: 800px; /* Limit the content width */
+    margin: 0 auto; /* Center the content horizontally */
+}
+
+/* Styles for Section 2 with a gray background */
+.section-gray {
+    background-color: gray;
+    padding: 50px 0; /* Adjust padding as needed */
+    text-align: center; /* Center the content */
+    width: 100%; /* Make the section span the entire width */
+    min-height: 500px; /* Increase the section height */
+}
+
+.section-gray .content {
+    max-width: 800px; /* Limit the content width */
+    margin: 0 auto; /* Center the content horizontally */
+    color: white; /* Text color for this section */
+}
+
+/* Styles for the footer section */
+footer {
+    background-color: #333; /* Background color for the footer */
+    color: white; /* Text color for the footer */
+    padding: 20px 0; /* Adjust padding as needed */
+}
+
+.footer-content {
+    max-width: 1200px; /* Limit the content width */
+    margin: 0 auto; /* Center the content horizontally */
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.footer-info, .footer-links, .footer-social {
+    flex: 1;
+    padding: 0 20px;
+}
+
+.footer-links ul {
+    list-style: none;
+}
+
+.footer-links ul li {
+    margin-bottom: 10px; /* Adjust spacing between links */
+}
+
+.social-icon {
+    display: inline-block;
+    margin-right: 10px; /* Adjust spacing between social icons */
+    color: white;
+    text-decoration: none;
+}
+
+/* Copyright notice */
+.copyright {
+    text-align: center;
+    margin-top: 20px; /* Adjust spacing from the footer content */
+}
+
+/* Additional styles to remove margin and padding for body and html */
+body, html {
+    margin: 0;
+    padding: 0;
+}
+
+
+/* Styles specific to the FAQ page */
+
+/* Styling the FAQ heading */
+.faq-page .faq-heading {
+    font-size: 24px;
+    color: #333;
+    margin-top: 50px;
+}
+
+/* Styling the FAQ paragraph */
+.faq-page .faq-paragraph {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 30px;
+}
+
+/* Styling the FAQ list */
+.faq-page .faq-list {
+    padding-left: 20px;
+}
+
+
+/* Styles specific to the About Us page */
+.about-section {
+    background-color: #f7f7f7; /* Custom background color for the About section */
+    padding: 60px 0; /* Custom padding for the section */
+    text-align: center;
+}
+
+.about-section .content {
+    max-width: 800px; /* Limit the content width */
+    margin: 0 auto; /* Center the content horizontally */
+}
+
+/* Custom styles for About Us heading */
+.about-heading {
+    font-size: 28px;
+    color: #333;
+    margin-top: 20px;
+}
+
+/* Custom styles for About Us paragraphs */
+.about-paragraph {
+    font-size: 18px;
+    line-height: 1.5;
+    margin-bottom: 30px;
+}
+
+

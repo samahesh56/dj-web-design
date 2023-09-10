@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="icon" href="{{ url_for('static', filename='img/favicon.ico') }}">
+    <title>Dj Web Design</title> <!-- Add page title here -->
+</head>
+<body>
+    <header> <!-- Navbar structure -->
+        <nav class="nav"> 
+            <ul class="nav__links">
+                <li><a href="{{ url_for('views.home') }}">Home</a></li>
+                <li><a href="{{ url_for('views.faq') }}">FAQ</a></li>
+                <li><a href="{{ url_for('views.about') }}">About the DJ's</a></li>
+            </ul>
+            <a class="cta" href="#"><button>Contact</button></a>
+            <div class="burger">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Section 1: White background -->
+    <section class="section-white">
+        <div class="content">
+            {% block content %}
+            <h1>Welcome</h1>
+            <p>This is the first section with a white background.</p>
+            {% endblock %}
+        </div>
+    </section>
+
+    <!-- Section 2: Gray background -->
+    <section class="section-gray">
+        <div class="content">
+            <h2>About Us</h2>
+            <p>Here's some information about our DJs and services.</p>
+        </div>
+    </section>
+
+    <section class="section-white">
+        <div class="content">
+            <h1>Venues</h1>
+            <p>This is the second section with a white background.</p>
+        </div>
+    </section>
+
+    <!-- Add more sections as needed -->
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-info">
+                <p>Contact Information:</p>
+                <p>Email: your@email.com</p>
+                <p>Phone: (123) 456-7890</p>
+            </div>
+            
+            <div class="footer-social">
+                <a href="#" class="social-icon">Facebook</a>
+                <a href="#" class="social-icon">Twitter</a>
+                <a href="#" class="social-icon">LinkedIn</a>
+                <a href="#" class="social-icon">Instagram</a>
+                <!-- Add more socials as needed -->
+            </div>
+        </div>
+        <div class="copyright">
+            &copy; 2023 Sankeerth Mahesh. All rights reserved.
+        </div>
+    </footer>
+
+    <script src="{{ url_for('static', filename='scripts.js') }}"></script>
+</body>
+</html>
