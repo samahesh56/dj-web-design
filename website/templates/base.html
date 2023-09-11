@@ -11,21 +11,24 @@
     <title>Dj Web Design</title> <!-- Add page title here -->
 </head>
 <body>
-    <header> <!-- Navbar structure -->
-        <nav class="nav"> 
-            <ul class="nav__links">
-                <li><a href="{{ url_for('views.home') }}">Home</a></li>
-                <li><a href="{{ url_for('views.faq') }}">FAQ</a></li>
-                <li><a href="{{ url_for('views.about') }}">About the DJ's</a></li>
-            </ul>
-            <a class="cta" href="#"><button>Contact</button></a>
-            <div class="burger">
-                <div class="bar"></div>
-                <div class="bar"></div>
-                <div class="bar"></div>
-            </div>
-        </nav>
-    </header>
+    <div class="navbar-container">
+        <header>
+            <!-- Navbar structure -->
+            <nav class="nav"> 
+                <ul class="nav__links">
+                    <li><a href="{{ url_for('views.home') }}">Home</a></li>
+                    <li><a href="{{ url_for('views.faq') }}">FAQ</a></li>
+                    <li><a href="{{ url_for('views.about') }}">About the DJ's</a></li>
+                </ul>
+                <a class="cta" href="#"><button>Contact</button></a>
+                <div class="burger">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </div>
+            </nav>
+        </header>
+    </div>
 
     <!-- Section 1: White background -->
     {% block content %}
