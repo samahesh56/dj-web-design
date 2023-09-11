@@ -24,6 +24,7 @@ li, a, button {
     z-index: 100; /* Ensure the navbar appears above other content */
     background-color: red; /* Background color of the navbar */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add a subtle shadow for separation */
+    border-bottom: 2px solid rgb(14, 14, 14);
 }
 
 /* Logo Styles */
