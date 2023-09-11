@@ -12,44 +12,67 @@ li, a, button {
     list-style: none; /* Remove bullet points */
     display: inline; /* Display as inline elements */
     margin-right: 20px; /* Increase spacing between navigation links */
-    margin-left: 18px; /* Move the navigation links to the left */
+    margin-left: 20px; /* Move the navigation links to the left */
 }
 
-
 /* Header Styles */
-header {
-    position: fixed; /* Navbar stays at the top */
+.navbar-container {
+    position: fixed;
     top: 0;
     left: 0;
     right: 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 22px 10%;
-    background-color: red; /* Red background for the navbar */
-    border-bottom: 2px solid rgb(92, 89, 89);
+    z-index: 100; /* Ensure the navbar appears above other content */
+    background-color: red; /* Background color of the navbar */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add a subtle shadow for separation */
+    border-bottom: 2px solid rgb(14, 14, 14);
 }
-
 
 /* Logo Styles */
 .logo {
     cursor: pointer;
 }
 
+nav.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 10%; /* Adjust padding as needed */
+    background-color: transparent; /* Background color of the navbar */
+}
+
+.nav__links ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    justify-content: flex-end; /* Move the navigation links to the right */
+}
+
+.nav__links li {
+    margin-left: 20px; /* Increase left margin for spacing */
+}
+
+.nav__links a {
+    text-decoration: none;
+    color: #333; /* Link text color */
+    font-weight: 500;
+    font-size: 18px;
+    transition: color 0.3s ease; /* Smooth color transition on hover */
+}
+
+/* Navigation link hover effect */
+.nav__links li a:hover {
+    color: aquamarine; /* Change the text color to aquamarine when hovered */
+    transition: color 0.3s ease; /* Add a smooth transition effect */
+}
 
 /* Navigation Styles (Hamburger-Style Navbar) */
-.nav {
-    display: flex; /* Change to flex to display the navigation menu */
-    align-items: center;
-    margin-left: auto; /* Right-align the navigation links */
-}
 
 
 .burger {
     display: none; /* Hide the hamburger icon by default */
     cursor: pointer;
 }
-
 
 .bar {
     width: 25px;
@@ -58,7 +81,6 @@ header {
     margin: 5px 0;
     transition: 0.4s;
 }
-
 
 /* Style for the "Contact" button */
 button {
@@ -70,18 +92,9 @@ button {
     transition: background-color 0.3s ease; /* Add a smooth transition effect */
 }
 
-
 button:hover {
     background-color: rgba(0, 136, 169, 1); /* Darken the color when hovered */
 }
-
-
-/* Navigation link hover effect */
-.nav__links li a:hover {
-    color: aquamarine; /* Change the text color to aquamarine when hovered */
-    transition: color 0.3s ease; /* Add a smooth transition effect */
-}
-
 
 /* Media query for smaller screens (Hamburger-Style Navbar) */
 @media screen and (max-width: 768px) {
@@ -89,47 +102,97 @@ button:hover {
         display: block; /* Show the hamburger icon on smaller screens */
     }
 
-
     .nav__links {
         display: none; /* Hide the navigation links on smaller screens */
     }
 }
 
-
-
-
-/* Styles for Section 1 with a white background */
-.section-white {
-    background-color: white;
-    padding: 60px 0; /* Adjust padding as needed */
-    text-align: center; /* Center the content */
-    width: 100%; /* Make the section span the entire width */
-    min-height: 500px; /* Increase the section height */
+/* Styles for general section flex box. */
+.section-flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 300px; /* Default minimum height */
+    background-color: #f7f7f7; /* Default background color */
+    padding: 20px; /* Default padding */
+    text-align: center;
 }
 
 
-.section-white .content {
+.section-flex .content {
     max-width: 800px; /* Limit the content width */
     margin: 0 auto; /* Center the content horizontally */
 }
 
+/* Parallax section for home page */
+.section-flex[data-section="parallax-section"] {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding-top: 80px; /* Set the padding-top to match the height of the header */
+    height: calc(100vh - 80px); /* Adjust the height to fill the remaining viewport height */
+    background-color: #f0f0f0; /* Fallback background color */
+    overflow: hidden;
+}
 
-/* Styles for Section 2 with a gray background */
-.section-gray {
-    background-color: gray;
-    padding: 50px 0; /* Adjust padding as needed */
-    text-align: center; /* Center the content */
-    width: 100%; /* Make the section span the entire width */
-    min-height: 500px; /* Increase the section height */
+/* Parallax content */
+.section-flex[data-section="parallax-section"] .flex-content {
+    text-align: center;
+    color: #333; /* Text color */
+    z-index: 2; /* Place content above background */
+}
+
+/* Parallax background */
+.section-flex[data-section="parallax-section"] .parallax-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://images.pexels.com/photos/2713711/pexels-photo-2713711.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"'); /* Replace with your image URL */
+    background-size: contain;
+    background-position: center;
+    transform: translateZ(0); /* Create a new stacking context for smoother scrolling */
+    opacity: 0.6; /* Adjust the opacity as needed */
+    z-index: 1; /* Place background behind content */
+
 }
 
 
-.section-gray .content {
-    max-width: 800px; /* Limit the content width */
-    margin: 0 auto; /* Center the content horizontally */
-    color: white; /* Text color for this section */
+/* Custom styles for Home page section 1 */
+.section-flex[data-section="home"] {
+    background-color: #f0f0f0;/* changes background of section  */
+    min-height: 400px;
 }
 
+/* Styling the home heading (h) text */
+.section-flex[data-section="home"] h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
+    color: #333;
+    margin-top: 30px; /* changes how far the text is from the top (higher num -> lower on screen) */
+}
+
+/* Styling the home paragraph (p) text */
+.section-flex[data-section="home"] p {
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+    color: #333;
+    margin-top: 30px; /* changes how far the text is from the top (higher num -> lower on screen) */
+}
+
+/* Custom styles for home page section 2 */
+.section-flex[data-section="about"] {
+    background-color: #544f4f;
+    padding: 30px;
+}
+
+.section-flex[data-section="contact"] {
+    background-color: #d0d0d0;
+    text-align: left;
+    padding: 10px;
+}
 
 /* Styles for the footer section */
 footer {

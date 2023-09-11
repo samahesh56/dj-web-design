@@ -6,50 +6,59 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap">
     <link rel="icon" href="{{ url_for('static', filename='img/favicon.ico') }}">
     <title>Dj Web Design</title> <!-- Add page title here -->
 </head>
 <body>
-    <header> <!-- Navbar structure -->
-        <nav class="nav"> 
-            <ul class="nav__links">
-                <li><a href="{{ url_for('views.home') }}">Home</a></li>
-                <li><a href="{{ url_for('views.faq') }}">FAQ</a></li>
-                <li><a href="{{ url_for('views.about') }}">About the DJ's</a></li>
-            </ul>
-            <a class="cta" href="#"><button>Contact</button></a>
-            <div class="burger">
-                <div class="bar"></div>
-                <div class="bar"></div>
-                <div class="bar"></div>
-            </div>
-        </nav>
-    </header>
+    <div class="navbar-container">
+        <header>
+            <!-- Navbar structure -->
+            <nav class="nav"> 
+                <ul class="nav__links">
+                    <li><a href="{{ url_for('views.home') }}">Home</a></li>
+                    <li><a href="{{ url_for('views.faq') }}">FAQ</a></li>
+                    <li><a href="{{ url_for('views.about') }}">About the DJ's</a></li>
+                </ul>
+                <a class="cta" href="#"><button>Contact</button></a>
+                <div class="burger">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </div>
+            </nav>
+        </header>
+    </div>
 
     <!-- Section 1: White background -->
-    <section class="section-white">
+    {% block content %}
+    <section class="section-flex" data-section="default">
         <div class="content">
-            {% block content %}
-            <h1>Welcome</h1>
-            <p>This is the first section with a white background.</p>
-            {% endblock %}
+            <h1>Default Section</h1>
+            <p>This is a default section. Customize it as needed.</p>
         </div>
     </section>
-
-    <!-- Section 2: Gray background -->
-    <section class="section-gray">
+    <section class="section-flex" data-section="default">
         <div class="content">
-            <h2>About Us</h2>
-            <p>Here's some information about our DJs and services.</p>
+            <h1>Default Section</h1>
+            <p>This is a default section. Customize it as needed.</p>
         </div>
     </section>
+    <section class="section-flex" data-section="default">
+        <div class="content">
+            <h1>Default Section</h1>
+            <p>This is a default section. Customize it as needed.</p>
+        </div>
+    </section>
+    {% endblock %}
 
+    <!-- 
     <section class="section-white">
         <div class="content">
             <h1>Venues</h1>
             <p>This is the second section with a white background.</p>
         </div>
-    </section>
+    </section> -->
 
     <!-- Add more sections as needed -->
 
