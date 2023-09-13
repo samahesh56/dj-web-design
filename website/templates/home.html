@@ -4,13 +4,29 @@
 {% block content %}
     <!-- Add your About Us content here -->
 
-    <section class="section-flex" data-section="parallax-section">
-        <div class="flex-content">
+    <section class="section-flex" data-section="slider-section">
+        <div class="slider-container">
+            <div class="slider">
+                <!-- Slides go here -->
+                <div class="slide">
+                    <img src="static\img\prexels-sample.webp" alt="Image 1">
+                    
+                </div>
+    
+                <div class="slide">
+                    <img src="static\img\djpic1.jpeg" alt="Image 2">
+                </div>
+            </div>
+            <button id="prevBtn">Previous</button>
+            <button id="nextBtn">Next</button>
+        </div>
+        <div class="slider-text">
             <h1>Welcome to Our DJ Website</h1>
             <p>We provide the best music experience for your events.</p>
         </div>
-        <div class="parallax-background"></div>
     </section>
+
+    
     
     <section class="section-flex" data-section="home">
         <div class="content">
