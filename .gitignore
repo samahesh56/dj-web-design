@@ -10,3 +10,5 @@ config_template.py
 
 # ignore config files
 config.py
+website/__pycache__/__init__.cpython-311.pyc
+website/__pycache__/views.cpython-311.pyc
