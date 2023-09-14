@@ -5,20 +5,21 @@
     <!-- Add your About Us content here -->
 
     <section class="section-flex" data-section="slider-section">
-        <div class="slider-container">
+        <div class="slider-wrapper">
             <div class="slider">
                 <!-- Slides go here -->
-                <div class="slide">
-                    <img src="static\img\prexels-sample.webp" alt="Image 1">
-                    
-                </div>
-    
-                <div class="slide">
-                    <img src="static\img\djpic2.jpeg" alt="Image 2">
-                </div>
+                <img id="slide-1" src="static/img/prexels-sample.webp" alt="a djpic1"/>
+                <img id="slide-2" src="static/img/djpic1.jpeg" alt="a djpic2"/>
+                <img id="slide-3" src="static/img/djpic2.jpeg" alt="a great background dj"/>
             </div>
-            <button id="prevBtn">Previous</button>
-            <button id="nextBtn">Next</button>
+            <!-- Add these buttons for navigation -->
+            
+
+            <div class="slider-nav">
+                <a id="button-slide-1" href="#slide-1" class="active"></a>
+                <a id="button-slide-2" href="#slide-2"></a>
+                <a id="button-slide-3" href="#slide-3"></a>
+            </div>
         </div>
         <div class="slider-text">
             <h1>Welcome to Our DJ Website</h1>

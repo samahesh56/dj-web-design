@@ -127,32 +127,28 @@ button:hover {
 
 /* Flexbox container for the slider section */
 .section-flex[data-section="slider-section"] {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 300px; /* Adjust the height as needed */
-    background-color: #f7f7f7; /* Background color for the slider section */
-    padding: 20px; /* Padding for the slider section */
-    text-align: center;
+    padding: 0;
 }
 
-.slider-container {
+/* Style the slider container */
+.slider-wrapper {
     position: relative;
     width: 100%;
-    max-width: 1300px; /* Adjust the maximum width as needed */
-    height: 100vh; /* Adjust the height as needed */
-    overflow: hidden;
+    margin: 0 auto;
 }
 
 .slider {
-    width: 100%;
-    transition: transform 0.5s ease;
+    display: flex;
+    aspect-ratio: 16 / 9;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.25);
+    transition: transform 0.5s ease; /* Add a smooth transition effect */
 }
 
-.slider img, .slider video {
-    width: 100%;
-    height: 95vh;
-    object-fit: cover;
+.slider img {
+    flex: 1 0 100%;
+    scroll-snap-align: start;
 }
 
 .slider-text {
@@ -163,6 +159,29 @@ button:hover {
     text-align: center;
     color: white;
     opacity: 0.7; /* Adjust the opacity as needed */
+}
+
+.slider-nav {
+    display: flex;
+    column-gap: 1rem;
+    position: absolute;
+    bottom: 200px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+.slider-nav a {
+   width: 0.5rem;
+   height: 0.5rem;
+   border-radius: 50%;
+   background-color:#fff;
+   opacity: 0.75;
+   transition: opacity ease 250ms;
+}
+
+.slider-nav a:hover {
+    opacity: 1;
 }
 
 

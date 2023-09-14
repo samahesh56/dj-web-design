@@ -17,43 +17,73 @@ document.addEventListener('DOMContentLoaded', function() { //implementation for 
     });
 });
 
-// Get references to HTML elements
-const slider = document.querySelector(".slider");
-const prevBtn = document.getElementById("prevBtn");
-const nextBtn = document.getElementById("nextBtn");
-
+const slides = document.querySelectorAll('.slider img');
+const slideNavLinks = document.querySelectorAll('.slider-nav a');
 let currentSlide = 0;
 
-// Initially hide all slides except the first one
-const slides = document.querySelectorAll(".slider > *");
-for (let i = 1; i < slides.length; i++) {
-    slides[i].style.display = "none";
+function showSlide(index) {
+    slides.forEach((slide, i) => {
+        if (i === index) {
+            slide.style.display = 'block';
+        } else {
+            slide.style.display = 'none';
+        }
+    });
 }
 
-// Add event listeners to the buttons
-prevBtn.addEventListener("click", () => {
-    showSlide(currentSlide - 1);
-});
-
-nextBtn.addEventListener("click", () => {
-    showSlide(currentSlide + 1);
-});
-
-function showSlide(slideIndex) {
-    // Hide the current slide
-    slides[currentSlide].style.display = "none";
-
-    if (slideIndex >= slides.length) {
-        currentSlide = 0;
-    } else if (slideIndex < 0) {
-        currentSlide = slides.length - 1;
-    } else {
-        currentSlide = slideIndex;
-    }
-
-    // Show the new current slide
-    slides[currentSlide].style.display = "block";
+function goToSlide(index) {
+    currentSlide = index;
+    showSlide(currentSlide);
 }
 
-// Initially, show the first slide
+// Automatically advance to the next slide every 3 seconds (adjust as needed)
+function autoAdvance() {
+    currentSlide = (currentSlide + 1) % slides.length;
+    showSlide(currentSlide);
+    updateNavLinks(currentSlide);
+}
+
+const slideInterval = setInterval(autoAdvance, 3000);
+
+// Initial display of the first slide
 showSlide(currentSlide);
+
+// Event listeners for navigation buttons
+slideNavLinks.forEach((link, index) => {
+    link.addEventListener('click', function (e) {
+        e.preventDefault();
+        goToSlide(index);
+        clearInterval(slideInterval); // Stop auto-advancing on manual navigation
+        updateNavLinks(currentSlide);
+    });
+});
+
+// Update navigation links to indicate the current slide
+function updateNavLinks(currentIndex) {
+    slideNavLinks.forEach((link, index) => {
+        if (index === currentIndex) {
+            link.classList.add('active');
+        } else {
+            link.classList.remove('active');
+        }
+    });
+
+}
+
+// Get references to the buttons in the .slider-nav
+const buttonSlide1 = document.querySelector('#button-slide-1');
+const buttonSlide2 = document.querySelector('#button-slide-2');
+const buttonSlide3 = document.querySelector('#button-slide-3');
+
+// Add click event listeners to the buttons
+buttonSlide1.addEventListener('click', () => {
+  scrollToSlide('slide-1');
+});
+
+buttonSlide2.addEventListener('click', () => {
+  scrollToSlide('slide-2');
+});
+
+buttonSlide3.addEventListener('click', () => {
+  scrollToSlide('slide-3');
+});
